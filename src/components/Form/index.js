@@ -5,30 +5,11 @@ import ProjectTypeField from '../ProjectType';
 import StrengthField from '../Strength';
 import AvailabilityField from '../Availability';
 
-function Dropdown({ userInput, setUserInput, infoMatch}) {
+function Dropdown({ userInput, setUserInput, infoMatch }) {
   const [avail, setAvail] = useState('');
   const [strength, setStrength] = useState('');
   const [projInt, setProjInt] = useState('');
   const [projType, setProjType] = useState('');
-
-  // async function infoMatch(userInput) {
-  //   try {
-  //     const data = await fetch(
-  //       `http://localhost:5000/projects?name=${userInput.project_type}&aval=${userInput.availability}`
-  //     );
-  //     const response = await data.json();
-  //     setTest(response)
-  //     console.table(response);
-  //     if (
-  //       response[0].availability === userInput.availability &&
-  //       response[0].project_type === userInput.project_type
-  //     ) {
-  //       console.log('PERFECT MATCH');
-  //     }
-  //   } catch (error) {
-  //     console.error(error.message);
-  //   }
-  // }
 
   function handleClick(e) {
     e.preventDefault();

@@ -18,10 +18,4 @@ export default function ProfileCard({ info }) {
       <button>Collabor8</button>
     </div>
   ));
-  // info.map((x) => (
-  //   <div>
-  //     <h3>{x.name}</h3>
-  //     <p>{x.project_type}</p>
-  //   </div>
-  // ))
 }

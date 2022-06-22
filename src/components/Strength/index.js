@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react';
 
-function StrengthField( { strength, setStrength } ) {
+function StrengthField({ strength, setStrength }) {
   function changeHandler(e) {
-    setStrength(e.target.value)
+    setStrength(e.target.value);
     // instead of printing their choice, we would write a function that adds their choice to our {}
   }
-
   return (
     <div>
       <label>Strength</label>
       <select name="Strength" onChange={changeHandler}>
-      <option value="null">(select from options below)</option>
+        <option value="null">(select from options below)</option>
         <option value="backend">Backend</option>
         <option value="frontend">Frontend</option>
         <option value="full-stack">Full stack</option>
