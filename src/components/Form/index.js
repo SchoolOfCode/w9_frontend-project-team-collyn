@@ -44,6 +44,7 @@ function Dropdown({ userInput, setUserInput, infoMatch}) {
     setStrength('');
     setProjType('');
     setProjInt('');
+    infoMatch();
   }
 
   return (
