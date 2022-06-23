@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import ProfileCard from '../components/ProfileCard';
+import Suggestions from '../components/Suggestions';
 
 function More() {
   const [tryd, setTryd] = useState('');
+  const [show, setShow] = useState({ visibility: 'hidden' });
 
   function randomNum(min, max) {
     var n = [];
@@ -11,7 +13,11 @@ function More() {
     }
     return n;
   }
-
+  const getCountTimeout = () => {
+    setTimeout(() => {
+      setShow({ visibility: 'visible' });
+    }, 1500);
+  };
   async function OtherProfiles() {
     try {
       const data = await fetch('http://localhost:5000/projects');
@@ -24,11 +30,18 @@ function More() {
       console.error(error.message);
     }
   }
-
   return (
     <div>
-      <button onClick={OtherProfiles}>Click For More Suggestions</button>
+      <button
+        onClick={() => {
+          OtherProfiles();
+          getCountTimeout();
+        }}
+      >
+        Click For More Suggestions
+      </button>
       {tryd && <ProfileCard info={tryd} />}
+      <Suggestions show={show}></Suggestions>
     </div>
   );
 }

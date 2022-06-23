@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-function Suggestions() {
-  // const [input, setInput] = useState('');
+function Suggestions({ show }) {
+  // const [input, setInput] = useState('')
 
   // const handleChange = (event) => {
   //   setInput(event.target.value);
@@ -12,9 +12,10 @@ function Suggestions() {
     project_interest: '',
     project_type: '',
     strength: '',
-    availablity: '',
+    availability: '',
   };
   const [contact, setContact] = useState(initialContact);
+  // const [show, setShow] = useState({ visibility: 'hidden' });
 
   const handleChangeFor = (propertyName) => (event) => {
     setContact((contact) => ({
@@ -44,7 +45,7 @@ function Suggestions() {
     }
   }
   return (
-    <div className="suggestions-box">
+    <div className="suggestions-box" style={show}>
       <h3 id="suggestions-intro">
         Can't find a project you're interested in? Suggest one below!
       </h3>
