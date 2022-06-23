@@ -2,7 +2,6 @@ import './App.css';
 import React from 'react';
 import More from '../../More';
 import Dropdown from '../Form';
-import Suggestions from '../Suggestions';
 // import ProfileCard from '../ProfileCard';
 
 function App() {
@@ -59,7 +58,6 @@ function App() {
         <Dropdown />
       </div>
       <More />
-      <Suggestions />
     </div>
   );
 }

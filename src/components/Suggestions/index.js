@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Suggestions() {
+function Suggestions({ show }) {
   // const [input, setInput] = useState('');
 
   // const handleChange = (event) => {
@@ -44,7 +44,7 @@ function Suggestions() {
     }
   }
   return (
-    <div className="suggestions-box">
+    <div className="suggestions-box" style={show}>
       <h3 id="suggestions-intro">
         Can't find a project you're interested in? Suggest one below!
       </h3>
