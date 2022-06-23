@@ -80,8 +80,8 @@ function Suggestions() {
         <div className="suggestions-input">
           <label value="name">Availablity</label>
           <input
-            value={contact.availablity}
-            onChange={handleChangeFor('availablity')}
+            value={contact.availability}
+            onChange={handleChangeFor('availability')}
             type="text"
           ></input>
         </div>
