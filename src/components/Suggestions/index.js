@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Suggestions({ show }) {
-  // const [input, setInput] = useState('');
+  // const [input, setInput] = useState('')
 
   // const handleChange = (event) => {
   //   setInput(event.target.value);
@@ -12,9 +12,10 @@ function Suggestions({ show }) {
     project_interest: '',
     project_type: '',
     strength: '',
-    availablity: '',
+    availability: '',
   };
   const [contact, setContact] = useState(initialContact);
+  // const [show, setShow] = useState({ visibility: 'hidden' });
 
   const handleChangeFor = (propertyName) => (event) => {
     setContact((contact) => ({
@@ -80,8 +81,8 @@ function Suggestions({ show }) {
         <div className="suggestions-input">
           <label value="name">Availablity</label>
           <input
-            value={contact.availablity}
-            onChange={handleChangeFor('availablity')}
+            value={contact.availability}
+            onChange={handleChangeFor('availability')}
             type="text"
           ></input>
         </div>
